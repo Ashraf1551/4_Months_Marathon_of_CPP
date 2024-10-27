@@ -15,17 +15,20 @@ int32_t main()
 {
 	fastIO;
 
-	int a, b, c;
-	cin >> a >> b >> c;
+	int a, b;
+	cin >> a >> b;
 
-	for (int i = a; i <= b; i++) {
-		if (i % c == 0) {
-			cout << i;
-			return 0;
-		}
-	}
+	// if (a > b) cout << a + a - 1;
 
-	cout << -1;
+	// else cout << a + b;
+
+	if (a < b)
+		swap(a, b);
+
+	if (a > b)
+		cout << a + a - 1;
+	else
+		cout << a + b;
 
 	return 0;
 }
