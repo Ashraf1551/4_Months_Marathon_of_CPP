@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fastIO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0)
+#define MOD 1000000007
+#define int long long int
+
+#define endl '\n'
+#define yes cout << "YES" << endl
+#define no cout << "NO" << endl
+#define B begin()
+#define E end()
+#define all(x) x.B, x.E
+
+int32_t main()
+{
+	fastIO;
+
+	int n;
+	cin >> n;
+	int sum = 0, mn = INT_MAX;
+	for (int i = 0; i < n; i++) {
+		int x;
+		cin >> x;
+		sum += x;
+		if (x % 2 != 0) mn = min(x, mn);
+	}
+	if (sum % 2 == 0) cout << sum << '\n';
+	else
+		cout << sum - mn << '\n';
+	return 0;
+}
